@@ -25,6 +25,9 @@ if (mysqli_num_rows($result) > 0) {
 
    // redirigir a la página correspondiente según el cargo del usuario
    if ($cargo == 'Administrador') {
+    session_start();
+    $_SESSION["nombre"] = $row["nombre"];
+    $_SESSION["apellido"] = $row["apellido"];
  
     header("Location: Admin.php");
 

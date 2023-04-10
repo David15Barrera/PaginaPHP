@@ -24,9 +24,7 @@
                     ?>
                 </div>
                 <div class="links">
-                    <a href="Historias.php" class="link">Historia</a>
-                    <a href="#" class="link">Principal</a>
-                    <a href="#" class="link">Principal</a>                    
+                    <a href="#" class="link">Historia</a>
                     <a href="login.php" class="link link--active">Cerrar</a>
                 </div>
             </div>
