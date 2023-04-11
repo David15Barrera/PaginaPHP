@@ -61,7 +61,7 @@
                     <option value="Usuario">Usuario</option>
                 </select>
                 <br>
-                <input type="submit" value="Agregar">
+                <input type="submit" value="Agregar" onclick="validar()">
             </form>
         </div>
          <div class="column-table">

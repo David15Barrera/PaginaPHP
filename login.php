@@ -36,6 +36,7 @@ if (mysqli_num_rows($result) > 0) {
     session_start();
     $_SESSION["nombre"] = $row["nombre"];
     $_SESSION["apellido"] = $row["apellido"];
+    $_SESSION["id"] = $row["id"];
  
        header("Location: users.php");
    } else {
