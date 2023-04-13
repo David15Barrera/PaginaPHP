@@ -59,10 +59,10 @@
         </div>
         <div class="form-group">
           <label for="apodo">Sobre Nombre:</label>
-          <input type="text" name="apodo" id="apodo">
+          <input type="text" name="apodo" id="apodo" require>
         </div>
         <div class="form-group">
-          <label for="pass">Descripcion:</label>
+          <label for="pass">Relato:</label>
           <textarea name="pass" id="pass" require></textarea>
         </div>
         <div class="form-group">

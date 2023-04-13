@@ -79,31 +79,45 @@ function validarCultivos() {
 	var errores = "";
   
 	if (fecha === "") {
-	  errores += "Debe ingresar la fecha de la cosecha.\n";
+	  errores += "Debe ingresar un Titulo.\n";
 	}
   
 	if (cantidad === "") {
-	  errores += "Debe ingresar la cantidad cosechada.\n";
-	} else if (isNaN(cantidad)) {
-	  errores += "La cantidad debe ser un número.\n";
-	}
+	  errores += "Debe ingresar un nombre.\n";
+	} 
   
 	if (departamento === "") {
-	  errores += "Debe seleccionar un departamento.\n";
+	  errores += "Debe seleccionar la cultura.\n";
 	}
   
 	if (metodo === "") {
-	  errores += "Debe ingresar el método de cultivo.\n";
+	  errores += "Debe ingresar el Sombre nombre.\n";
 	}
   
 	if (area === "") {
-	  errores += "Debe ingresar el área cultivada.\n";
-	} else if (isNaN(area)) {
-	  errores += "El área cultivada debe ser un número.\n";
-	}
+	  errores += "Debe ingresar una descripcion.\n";
+	} 
   
 	if (errores !== "") {
 	  alert(errores);
 	  event.preventDefault();
 	}
   }
+
+  function eliminar(id) {
+    if (confirm("¿Desea eliminar este registro?")) {
+        window.location.href = "eliminar.php?idcultivo=" + id;
+    }
+}
+
+function eliminarHistorias(id) {
+    if (confirm("¿Desea eliminar este registro?")) {
+        window.location.href = "eliminarHis.php?idLeyenda=" + id;
+    }
+}
+
+function eliminarUser(id) {
+    if (confirm("¿Desea eliminar este registro?")) {
+        window.location.href = "eliminarUser.php?id=" + id;
+    }
+}

@@ -75,6 +75,7 @@
                         <th>Apellido</th>
                         <th>Usuario</th>
                         <th>Cargo</th>
+                        <th>Accion</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -82,6 +83,7 @@
                         include 'conection.php';
                         $sql = "SELECT * FROM Usuarios";
                         $result = mysqli_query($conn, $sql);
+                        $_SESSION["id"] = $row["id"];
                         while($row = mysqli_fetch_assoc($result)){
                             echo "<tr>";
                             echo "<td>" . $row['id'] . "</td>";
@@ -89,7 +91,9 @@
                             echo "<td>" . $row['apellido'] . "</td>";
                             echo "<td>" . $row['usuario'] . "</td>";
                             echo "<td>" . $row['cargo'] . "</td>";
+                            echo "<td><button class='btnAcc' onclick='eliminarUser(" . $row['id'] . ")'>Eliminar</button>";
                             echo "</tr>";
+                            $_SESSION["id"] = $row["id"];
                         }
                     ?>
                 </tbody>

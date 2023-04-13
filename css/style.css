@@ -612,4 +612,20 @@ html {
   .welcome-sectionAdmin a {
 	text-align: center;
 }
-  
+.btnAcc {
+  background-color: #e92828;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btnAcc:hover{
+  background-color: #e76529;
+}
+

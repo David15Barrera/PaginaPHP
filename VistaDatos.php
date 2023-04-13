@@ -51,7 +51,8 @@
                         <th>Tipo Cultivo</th>
                         <th>Metodo de Cultivo</th>                       
                         <th>Area Cultivada (m2)</th>
-                        <th>Agricultor</th>                                                                
+                        <th>Agricultor</th>                                                        
+                        <th>Acciones</th>                                                                
                     </tr>
                 </thead>
                 <tbody>
@@ -59,6 +60,7 @@
                         include 'conection.php';
                         $sql = "SELECT Cultivos.*, Usuarios.nombre, Usuarios.apellido FROM Cultivos JOIN Usuarios ON Cultivos.idUser = Usuarios.id ORDER BY Cultivos.tipoCultivo ASC";
                         $result = mysqli_query($conn, $sql);
+                        $_SESSION["idcultivo"] = $row["idcultivo"];
                         while($row = mysqli_fetch_assoc($result)){
                             echo "<tr>";
                             echo "<td>" . $row['fechaCosecha'] . "</td>";
@@ -68,8 +70,10 @@
                             echo "<td>" . $row['metodoCultivo'] . "</td>";
                             echo "<td>" . $row['areaCultivada'] . "</td>";
                             echo "<td>" . $row['nombre'] ." " .$row['apellido'] . "</td>";
+                            echo "<td><button class='btnAcc' onclick='eliminar(" . $row['idcultivo'] . ")'>Eliminar</button>";
                             echo "</tr>";
-                        }
+                            $_SESSION["idcultivo"] = $row["idcultivo"];
+                        }                        
                     ?>
                                  </tbody>
             </table>
@@ -79,7 +83,7 @@
         <br>
         <center><h2 style="color:blueviolet">Informacion de relatos cortos publicados</h2></center> 
         <br>
-        <div class="column-table">
+        <div class="column-table" >
             <table>
                 <thead>
                 <tr>
@@ -89,6 +93,7 @@
                         <th>Sobre Nombre</th>
                         <th>Relato</th>                        
                         <th>Escritor</th>
+                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -96,6 +101,7 @@
                         include 'conection.php';
                         $sql = "SELECT Usuarios.nombre, Usuarios.apellido, Leyendas.* FROM Leyendas INNER JOIN Usuarios ON Leyendas.userId = Usuarios.id;";
                         $result = mysqli_query($conn, $sql);
+                        $_SESSION["idLeyenda"] = $row["idLeyenda"];
                         while($row = mysqli_fetch_assoc($result)){
                             echo "<tr>";
                             echo "<td>" . $row['nombreLeye'] . "</td>";
@@ -104,13 +110,16 @@
                             echo "<td>" . $row['apodo'] . "</td>";
                             echo "<td class='descripcion'>" . $row['descripcion'] . "</td>";
                             echo "<td>" . $row['nombre'] ." " .$row['apellido'] . "</td>";
+                            echo "<td><button class='btnAcc' onclick='eliminarHistorias(" . $row['idLeyenda'] . ")'>Eliminar</button>";                            
                             echo "</tr>";
+                            $_SESSION["idLeyenda"] = $row["idLeyenda"];
                         }
                     ?>
                                  </tbody>
             </table>
         </div>
-
+        <br>
+        <br>
 <script type="text/javascript" src="js/login.js"></script>
         </body>
 </html>
