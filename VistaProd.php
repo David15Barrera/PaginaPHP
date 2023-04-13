@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/styleProd.css" type="text/css">
+
         <script src="js/login.js"></script>        
             <title>Cosecha Maiz</title>
         <style>
@@ -93,5 +94,8 @@
     </div>
     </form>
 </section>
+<br>
+       <br>
+        <br>
     </body>
 </html>

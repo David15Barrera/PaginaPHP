@@ -9,6 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/styleHis.css" type="text/css">
         <title>Usuario Maiz</title>
     </head>
     <body>
@@ -31,6 +32,80 @@
                 </div>
             </div>
         </nav>
-
         </body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="column-table">
+         <center><h2>Relatos Cortos Compartidos</h2></center> 
+         <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre Leyenda</th>
+                        <th>Dios</th>
+                        <th>Cultura</th>
+                        <th>Sobre Nombre</th>
+                        <th>Descripcion</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+        <?php
+                        include 'conection.php';
+                        $sql = "SELECT * FROM Leyendas WHERE userId =". $_SESSION["id"];
+                        $result = mysqli_query($conn, $sql);
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo "<tr>";
+                            echo "<td>" . $row['idLeyenda'] . "</td>";
+                            echo "<td>" . $row['nombreLeye'] . "</td>";
+                            echo "<td>" . $row['nombreDios'] . "</td>";
+                            echo "<td>" . $row['cultura'] . "</td>";
+                            echo "<td>" . $row['apodo'] . "</td>";
+                            echo "<td class='descripcion'>" . $row['descripcion'] . "</td>";
+                            echo "</tr>";
+                        }
+                    ?>
+                                 </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <center><h2>Registro de Cultivos</h2></center> 
+<br>
+<div class="column-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Fecha Cosecha</th>
+                        <th>Cantidad</th>
+                        <th>Departamento</th>
+                        <th>Tipo Cultivo</th>
+                        <th>Metodo de Cultivo</th>                       
+                        <th>Area Cultivada</th>                                        
+                    </tr>
+                </thead>
+                <tbody>
+        <?php
+                        include 'conection.php';
+                        $sql = "SELECT * FROM Cultivos WHERE idUser =". $_SESSION["id"];
+                        $result = mysqli_query($conn, $sql);
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo "<tr>";
+                            echo "<td>" . $row['idcultivo'] . "</td>";
+                            echo "<td>" . $row['fechaCosecha'] . "</td>";
+                            echo "<td>" . $row['cantidadCosechada'] . "</td>";
+                            echo "<td>" . $row['departamento'] . "</td>";
+                            echo "<td>" . $row['tipoCultivo'] . "</td>";
+                            echo "<td>" . $row['metodoCultivo'] . "</td>";
+                            echo "<td>" . $row['areaCultivada'] . "</td>";                            
+                            echo "</tr>";
+                        }
+                    ?>
+                                 </tbody>
+            </table>
+        </div>
+    </body>
 </html>

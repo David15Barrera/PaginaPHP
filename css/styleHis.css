@@ -47,3 +47,45 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #d8a84f;
 }
+
+
+/*---------------------------------------------------------TABLAS*/
+.column-table {
+  max-width: 970px; /* Limita el ancho de la tabla */
+  margin: 0 auto; /* Centra la tabla en la página */
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(243, 240, 240, 0.1); /* Agrega una sombra */
+  border-radius: 5px;
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  
+}
+
+.column-table h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.column-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.column-table th,
+.column-table td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #cccccc;
+  
+}
+
+.column-table th {
+  background-color: #8b71d3;
+  color: white;
+}
+
+.column-table tbody td:last-child {
+  word-wrap: break-word; /* Ajusta el texto automáticamente */
+  max-width: 700px; /* Limita el ancho de la celda */
+}
+

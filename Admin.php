@@ -9,6 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+
         <title>Admin Maiz</title>
     </head>
     <body>
@@ -25,11 +26,17 @@
                 </div>
                 <div class="links">
                     <a href="RegUser.php" class="link">Usuarios</a>
-                    <a href="#" class="link">Historias</a>
+                    <a href="VistaDatos.php" class="link">Datos</a>
                     <a href="#" class="link">Principal</a>                    
                     <a href="login.php" class="link link--active">Cerrar</a>
                 </div>
             </div>
         </nav>
-        </body>
+ 
+ <div class="welcome-sectionAdmin">
+  <div class="backgroundAdmin">
+    <div class="overlayAdmin">
+      <h1>Ut'z I Petik</h1>
+      <p>BIENVENIDO ADMINISTRADOR</p>
+             </body>
 </html>

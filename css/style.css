@@ -223,6 +223,7 @@ i {
     font-size: 22px;
     line-height: 32px;
     margin-bottom: 60px;
+    text-align: justify;
 }
 
 .copy__section--modifier{
@@ -550,3 +551,65 @@ html {
 
 /*--------------------------------------------------Admin---------------------------------*/
 /* Estilos para la tabla */
+.imgPrin {
+	float: left;
+	margin-right: 20px;
+	max-width: 300px;
+	height: auto;
+  }
+
+.subsubtitu{
+  color: #4e267a;
+  font-size: 30px;
+}
+
+.Estadistico{
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: auto;
+    border: 5px solid rgb(148, 48, 151);
+}
+
+/*---------------------------------------------------------------------- VIsual admin*/
+.welcome-sectionAdmin {
+	position: relative;
+	height: 100vh;
+}
+
+.backgroundAdmin {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/FondoCosecha.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.overlayAdmin {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 50px;
+	text-align: center;
+}
+  .welcome-sectionAdmin h1 {
+	font-size: 4em;
+	margin-bottom: 0.5em;
+	color: #332077;
+  }
+  
+  .welcome-sectionAdmin p {
+	font-size: 1.5em;
+	margin-bottom: 1.5em;
+	font-weight: bold;
+  }
+  
+  .welcome-sectionAdmin a {
+	text-align: center;
+}
+  
