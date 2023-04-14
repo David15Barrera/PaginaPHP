@@ -49,6 +49,7 @@
                         <th>Cultura</th>
                         <th>Sobre Nombre</th>
                         <th>Descripcion</th>                        
+                        <th>Acción</th>                        
                     </tr>
                 </thead>
                 <tbody>
@@ -64,6 +65,7 @@
                             echo "<td>" . $row['cultura'] . "</td>";
                             echo "<td>" . $row['apodo'] . "</td>";
                             echo "<td class='descripcion'>" . $row['descripcion'] . "</td>";
+                            echo "<td><a class='btnAccU' href='ModRelato.php?idLeyenda=" . $row['idLeyenda'] . "&nombreLeye=" . $row['nombreLeye'] . "&nombreDios=" . $row['nombreDios'] . "&cultura=" . $row['cultura'] . "&apodo=" . $row['apodo'] . "&descripcion=" . $row['descripcion'] . "'>Modificar</a>";                            
                             echo "</tr>";
                         }
                     ?>
@@ -80,11 +82,12 @@
                     <tr>
                         <th>ID</th>
                         <th>Fecha Cosecha</th>
-                        <th>Cantidad</th>
+                        <th>Cantidad (lb)</th>
                         <th>Departamento</th>
                         <th>Tipo Cultivo</th>
                         <th>Metodo de Cultivo</th>                       
-                        <th>Area Cultivada</th>                                        
+                        <th>Area Cultivada (m2)</th>
+                        <th>Acción</th>                                        
                     </tr>
                 </thead>
                 <tbody>
@@ -100,12 +103,15 @@
                             echo "<td>" . $row['departamento'] . "</td>";
                             echo "<td>" . $row['tipoCultivo'] . "</td>";
                             echo "<td>" . $row['metodoCultivo'] . "</td>";
-                            echo "<td>" . $row['areaCultivada'] . "</td>";                            
+                            echo "<td>" . $row['areaCultivada'] . "</td>";
+                            echo "<td><a class='btnAccU' href='modCultivo.php?idcultivo=" . $row['idcultivo'] . "&fechaCosecha=" . $row['fechaCosecha'] . "&cantidadCosechada=" . $row['cantidadCosechada'] . "&departamento=" . $row['departamento'] . "&metodoCultivo=" . $row['metodoCultivo'] . "&areaCultivada=" . $row['areaCultivada'] . "'>Modificar</a>";                                                        
                             echo "</tr>";
                         }
                     ?>
                                  </tbody>
             </table>
         </div>
+        <br>
+        <br>
     </body>
 </html>
