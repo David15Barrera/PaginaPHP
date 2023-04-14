@@ -21,7 +21,7 @@ $sql = "UPDATE Cultivos SET fechaCosecha='$fechaCosecha', cantidadCosechada='$ca
 
 if (mysqli_query($conn, $sql)) {
     echo "Los datos se almacenaron correctamente";
-    header("Location: users.php");
+    header("Location: VistaUser.php");
 } else {
     echo "Error al almacenar los datos: " . mysqli_error($conn);
 }

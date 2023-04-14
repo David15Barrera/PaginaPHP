@@ -8,7 +8,9 @@ function validar() {
 	  alert("Por favor, llene todos los campos");
 	  return false;
 	}
+	alert("Usuario registrado");
 	return true;
+
 }
 
 const inputs = document.querySelectorAll(".input");
@@ -62,12 +64,13 @@ function validarCultivos() {
 	  errores += "Debe ingresar el área cultivada.\n";
 	} else if (isNaN(area)) {
 	  errores += "El área cultivada debe ser un número.\n";
-	}
-  
+	}  
 	if (errores !== "") {
 	  alert(errores);
 	  event.preventDefault();
-	}
+	}else {
+		alert("Ingresado");
+	  }
   }
 
   function validarHistorias() {
@@ -101,7 +104,9 @@ function validarCultivos() {
 	if (errores !== "") {
 	  alert(errores);
 	  event.preventDefault();
-	}
+	}else {
+		alert("Ingresado");
+	  }
   }
 
   function eliminar(id) {

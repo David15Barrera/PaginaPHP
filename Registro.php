@@ -6,7 +6,7 @@
 include 'conection.php';
 
 if(empty($_POST["nombre"])|| empty($_POST["Name"])|| empty($_POST["pass"]) || empty($_POST["apellido"])) {
-    echo "El campo nombre es obligatorio";
+    echo "Los campos son obligatorios es obligatorio";
  
 }else{
 // Verifica si se ha enviado el formulario

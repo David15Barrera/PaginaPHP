@@ -13,7 +13,7 @@ $sql ="UPDATE Leyendas SET nombreLeye='$nombre', nombreDios='$dios', cultura='$c
 
 if (mysqli_query($conn, $sql)) {
     echo "Los datos se almacenaron correctamente";
-    header("Location: users.php");
+    header("Location: VistaUser.php");
 } else {
     echo "Error al almacenar los datos: " . mysqli_error($conn);
 }

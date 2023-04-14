@@ -29,10 +29,11 @@
                     ?>
                 </div>
                 <div class="links">
-                    <a href="Historias.php" class="link">Historias</a>
+                <a href="VistaUser.php" class="link">Compartido</a>
+                <a href="Historias.php" class="link">Historias</a>    
                     <a href="#" class="link">Cultivos</a>
                     <a href="users.php" class="link">Principal</a>  
-                    <a href="login.php" class="link link--active">Cerrar</a>
+                    <a href="CerrarSesion.php" class="link link--active">Cerrar</a>
                 </div>
             </div>
         </nav>

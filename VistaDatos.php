@@ -30,7 +30,7 @@
                     <a href="RegUser.php" class="link">Usuarios</a>
                     <a href="#" class="link">Datos</a>
                     <a href="Admin.php" class="link">Principal</a>  
-                    <a href="login.php" class="link link--active">Cerrar</a>
+                    <a href="CerrarSesion.php" class="link link--active">Cerrar</a>
                 </div>
             </div>
         </nav>
